@@ -9,14 +9,6 @@ Yet Another Canonical Correlation Analysis Package
 This package provides an alternative canonical correlation/redundancy analysis function, with associated print, plot, and summary methods.  A method for generating helio plots is also included.
 }
 \details{
-\tabular{ll}{
-Package: \tab yacca\cr
-Type: \tab Package\cr
-Version: \tab 1.3\cr
-Date: \tab 2020-02-23\cr
-License: \tab GPL (>= 3)\cr
-LazyLoad: \tab yes\cr
-}
 
 For details on using the package, see \code{\link{cca}} and \code{\link{helio.plot}}.
 }
