@@ -1,0 +1,14 @@
+import(utils)
+import(stats)
+import(grDevices)
+import(graphics)
+
+#Register S3 methods
+S3method(plot,cca)
+S3method(print,cca)
+S3method(summary,cca)
+S3method(print,summary.cca)
+S3method(print,F.test.cca)
+
+# Export all names
+exportPattern(".")

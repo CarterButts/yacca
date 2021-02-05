@@ -1,0 +1,32 @@
+CHANGELOG:
+v1.4 - Minor Changes and New Features
+  Changes:
+    - Previous versions forced use of qr.solve; the standard solve function
+      is now used (which will often default back to qr.solve, but may not)
+    - ChangeLog is now NEWS, and the package has been moved to GitHub
+      (perhaps one day even to return to CRAN)
+  New Features:
+    - cca now supports L2 regularization, and allows for a priori selection
+      of a reduced canonical variate set for high-dimensional problems;
+      support for faster eigendecomposition in these cases using RSpectra
+      has been added (though experience suggests that speed comes at some
+      loss of accuracy)
+
+v1.3 - Minor Changes
+  Changes:
+    - Added yet more NAMESPACE changes, because the CRAN developers love
+      nothing in this world more than breaking legacy code.
+
+v1.2 - Minor Changes
+  Changes:
+    - Added NAMESPACE, so that this package will install with modern R
+      versions.
+
+v1.1 - Bug Fixes and New Functions
+  New Features:
+    - F.test.cca: F Test for Canonical Correlations Using Rao's Approximation
+      [Submitted by Nicholas Crookston]
+  Bug Fixes:
+    - cca would incorrectly flip signs in some cases.
+
+v1.0 - Initial Public Release
