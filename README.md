@@ -1,5 +1,10 @@
 # yacca
 
+<!-- badges: start -->
+[![R build status](https://github.com/CarterButts/yacca/workflows/R-CMD-check/badge.svg)](https://github.com/CarterButts/yacca/actions)
+[![CRAN status](https://www.r-pkg.org/badges/version/yacca)](https://CRAN.R-project.org/package=yacca)
+<!-- badges: end -->
+
 ### Yet Another Canonical Correlation Analysis Package for R
 
 The `yacca` package contains basic functionality for canonical correlation analysis and related calculations (e.g., canonical redundancy, loadings, etc.).  As the name implies, this is one of many (including the cancor function of base R).  `yacca` is not necessarily superior to the others, but supplies various bits of functionality that are convenient and otherwise difficult to find in one place (e.g., helio plots for loadings, redundancy score calculation, regularization support).  If you prefer a different package, rest assured that the author is not offended.
