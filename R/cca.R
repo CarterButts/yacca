@@ -37,10 +37,15 @@ function(x, y, xlab=colnames(x), ylab=colnames(y), xcenter=TRUE, ycenter=TRUE, x
    }else{         #Less stable, but possibly faster
      ey<-RSpectra::eigs(solve(cyy,cyx)%*%solve(cxx,cxy),k=ncv,which="LM")
    }
-   print(solve(cyy,cyx)%*%solve(cxx,cxy))
-   print(ey$val)
-   print(eigen(solve(cyy,cyx)%*%solve(cxx,cxy))$val)
-   ex<-list(values=ey$values,vectors=solve(cxx,cxy)%*%(ey$vec))
+   #Note: we use Re to filter out tiny complex values that can arise
+   #due to numerical noise
+   ey$values<-Re(ey$values)
+   ey$vectors<-Re(ey$vectors)
+   #Debug info - uncomment to trace the solution
+   #print(solve(cyy,cyx)%*%solve(cxx,cxy))
+   #print(ey$val)
+   #print(eigen(solve(cyy,cyx)%*%solve(cxx,cxy))$val)
+   ex<-list(values=Re(ey$values),vectors=Re(solve(cxx,cxy)%*%(ey$vec)))
    o$corr<-(ex$val[1:ncv])^0.5
    names(o$corr)<-cvlab
    o$corrsq<-o$corr^2                                 #Get the variance accounted for by each canonical variate
