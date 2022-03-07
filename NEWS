@@ -1,4 +1,9 @@
 CHANGELOG:
+v1.4-2 - CRAN Re-up
+  Changes:
+    - Minor changes to allow this go back to CRAN, since they seem to
+      have reposted the old package.  It should now be compliant.
+
 v1.4-1 - Bug Fixes
   Bug Fixes:
     - Numerical error could lead to tiny imaginary values, which would
